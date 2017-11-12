@@ -49,7 +49,7 @@
 ![그림1](/img/pic1.png)
 
 단순히 음악 세기를 비교한 것, 주파수 분포를 비교한 것 두가지가 있습니다.
-![캐논1](/img/[010725]canon_mono_60_Long(byAmp).png.png) ![캐논2](/img/[010726]canon_mono_60_Long(byFreq).png)
+![캐논1](/img/[010725]canon_mono_60_Long(byAmp).png) ![캐논2](/img/[010726]canon_mono_60_Long(byFreq).png)
 
 사용한 음원은 캐논변주곡 입니다.
 
