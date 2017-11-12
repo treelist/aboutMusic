@@ -82,13 +82,13 @@ print("raw_density_map.shape:", raw_density_map.shape)
 
 # byAmp에는 value단위 음의 세기에 대한 정보가 들어있는 simplified_abs_data를 15단위에서 부터 900단위까지 구분하였을 때 유사도에 대한 정보가 담깁니다.
 # MY_SAMPLE_RATE가 30이므로 15는 0.5초 900은 30초 입니다.
-byAmp = toolbox.term_cal_1d(simplified_abs_data, 15, 900)
+byAmp = toolbox.term_cal_1d(simplified_abs_data, int(MY_SAMPLE_RATE * 0.5), int(MY_SAMPLE_RATE * 30))
 # 단위를 초(sec)로 변경
 byAmp[:,0] = byAmp[:, 0] / MY_SAMPLE_RATE
 
 # byFreq에는 value단위 음의 주파수에 대한 정보가 들어있는 raw_density_map을 15단위에서 부터 900단위까지 구분하였을 때 유사도에 대한 정보가 담깁니다.
 # MY_SAMPLE_RATE가 30이므로 위와 같이 15는 0.5초 900은 30초 입니다.
-byFreq = toolbox.term_cal_2d(raw_density_map, 15, 900)
+byFreq = toolbox.term_cal_2d(raw_density_map, int(MY_SAMPLE_RATE * 0.5), int(MY_SAMPLE_RATE * 30))
 # 단위를 초(sec)로 변경
 byFreq[:, 0] = byFreq[:, 0] / MY_SAMPLE_RATE
 
@@ -97,10 +97,10 @@ paintbox.show_fast_2d(byFreq, xlabel="Term(sec)", title=title + "_Long(byFreq)",
 
 
 # 위와 동일한 방법으로 짧은 범위에서
-byAmp = toolbox.term_cal_1d(simplified_abs_data, 15, 90)
+byAmp = toolbox.term_cal_1d(simplified_abs_data, int(MY_SAMPLE_RATE * 0.5), int(MY_SAMPLE_RATE * 3))
 byAmp[:,0] = byAmp[:, 0] / MY_SAMPLE_RATE
 
-byFreq = toolbox.term_cal_2d(raw_density_map, 15, 90)
+byFreq = toolbox.term_cal_2d(raw_density_map, int(MY_SAMPLE_RATE * 0.5), int(MY_SAMPLE_RATE * 3))
 byFreq[:, 0] = byFreq[:, 0] / MY_SAMPLE_RATE
 
 paintbox.show_fast_2d(byAmp, xlabel="Term(sec)", title=title + "_Short(byAmp)", savefig=True)
