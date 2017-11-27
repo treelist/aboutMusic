@@ -57,6 +57,8 @@
 3. 고속 푸리에 변환(Fast Fourier Transform)적용 및 이산화(Discretize) (old)
 4. 이산화 되어 박자, 마디 구간과 코드 매칭
 * 4-1. 각 구간과 코드 학습 (old)
+코드가 알려진 음악의 특정 구간을 잘라내 주파수 중 일부를 이산화, 정규화 한 결과입니다. 단위 시간동안의 음악을 2차원으로 맵핑 하여, 이를 학습시키는 것입니다.
+![샘플1](/img/sample.png)
 
 ## 참고
 [관련 슬라이드](https://docs.google.com/presentation/d/1KDuoj-8nOaNf481Aq_ga0E4G8MMfLYw4z-y0FZ8nEDA/edit?usp=sharing)
